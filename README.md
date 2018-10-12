@@ -22,7 +22,7 @@ Note:
     STORED AS TEXTFILE
     LOCATION '/user/root/movies_new';
     
-# Connect to your MS SQL Server (AWS or Azure or OnPrem) and run following commands:
+# Connect to your MS SQL Server (AWS or Azure) and run following commands:
 
     CREATE DATABASE demoqlserver
     CREATE TABLE demoqlserver.dbo.movies_txt
