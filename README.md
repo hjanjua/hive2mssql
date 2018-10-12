@@ -1,5 +1,6 @@
 # hive2mssql
 Export from Hive to MSSQL
+
 Note: 
 1) Using dataset from movies https://grouplens.org/datasets/movielens/. A copy of CSV file has been provided in the project.
 2) This process has been tested on Linux OS using Hortonwork Sandbox distribution for VMWare 
@@ -32,7 +33,7 @@ Note:
     column3 varchar(25),
     column4 varchar(25))
     
-# Connect to your Hadoop server and run following sqoop job on AWS:
+# Connect to your Hadoop server and run following sqoop job for AWS RDS (SQL Server Express):
 
     sqoop export --connection-manager org.apache.sqoop.manager.SQLServerManager --connect 'jdbc:sqlserver://HOST:PORT;database=DATABASE_NAME' --username 'USER_NAME' --password PASSWORD --export-dir '/user/root/movies_new/movies_new.csv' --table 'movies_txt' --input-fields-terminated-by '|' --lines-terminated-by '\n'
 
@@ -41,7 +42,7 @@ If you need an error on sqoop export, you might have to add sql JDBC jar in the 
     export HADOOP_CLASSPATH="/sql/sqljdbc41.jar"
     
     
-# Connect to your Hadoop server and run following sqoop job on Azure:
+# Connect to your Hadoop server and run following sqoop job for Microsoft Azure SQL Server:
 
     sqoop export --connection-manager org.apache.sqoop.manager.SQLServerManager --connect 'jdbc:sqlserver://HOST:PORT;database=DATABASE_NAME' --username 'USER_NAME' -P --export-dir '/user/root/movies_new/movies_new.csv' --table 'movies_txt' --input-fields-terminated-by '|' --lines-terminated-by '\n'
 
