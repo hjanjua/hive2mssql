@@ -6,13 +6,13 @@ Note:
 2) This process has been tested on Linux OS using Hortonwork Sandbox distribution for VMWare 
 3) Sqoop job was tested on AWS RDS (MSSQL Express / Free tier) and Azure (SQL Server)
 
-## SSH to Hadoop server and then create a directory in HDFS, download the sample content (CSV) and put the file in HDFS dir
+## SSH to Hadoop server, create a directory in HDFS, download the sample content (CSV) and put the file in HDFS dir
 
     hdfs dfs -mkdir movies_new
     wget https://www.dropbox.com/s/iwcrcikvsui0yhx/movies_.csv?dl=1
     hdfs dfs -put movies.csv movies_new
 
-## SSH to Hadoop server and then connect to hive and create an external table (if not exist) with sample content
+## SSH to Hadoop server, connect to hive and create an external table (if not exist) with sample content
 
     CREATE EXTERNAL TABLE IF NOT EXISTS movies_txt(MovieID INT,MovieName STRING, 
     ReleaseDate STRING, IMDBLink STRING,column3 STRING, column4 STRING )
