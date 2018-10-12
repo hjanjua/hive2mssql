@@ -32,10 +32,19 @@ Note:
     column3 varchar(25),
     column4 varchar(25))
     
-# Connect to your Hadoop server and run following sqoop job:
+# Connect to your Hadoop server and run following sqoop job on AWS:
 
     sqoop export --connection-manager org.apache.sqoop.manager.SQLServerManager --connect 'jdbc:sqlserver://HOST:PORT;database=DATABASE_NAME' --username 'USER_NAME' --password PASSWORD --export-dir '/user/root/movies_new/movies_new.csv' --table 'movies_txt' --input-fields-terminated-by '|' --lines-terminated-by '\n'
 
 If you need an error on sqoop export, you might have to add sql JDBC jar in the class path;
 
     export HADOOP_CLASSPATH="/sql/sqljdbc41.jar"
+    
+    
+# Connect to your Hadoop server and run following sqoop job on Azure:
+
+    sqoop export --connection-manager org.apache.sqoop.manager.SQLServerManager --connect 'jdbc:sqlserver://HOST:PORT;database=DATABASE_NAME' --username 'USER_NAME' -P --export-dir '/user/root/movies_new/movies_new.csv' --table 'movies_txt' --input-fields-terminated-by '|' --lines-terminated-by '\n'
+
+If you need an error on sqoop export, you might have to add sql JDBC jar in the class path;
+
+    export HADOOP_CLASSPATH="/sql/sqljdbc41.jar"    
