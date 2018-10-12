@@ -37,7 +37,7 @@ Note:
 
     sqoop export --connection-manager org.apache.sqoop.manager.SQLServerManager --connect 'jdbc:sqlserver://HOST:PORT;database=DATABASE_NAME' --username 'USER_NAME' --password PASSWORD --export-dir '/user/root/movies_new/movies_new.csv' --table 'movies_txt' --input-fields-terminated-by '|' --lines-terminated-by '\n'
 
-If you need an error on sqoop export, you might have to add sql JDBC jar in the class path;
+If you get an error on sqoop export, you might have to add sql JDBC jar in the Hadoop class path;
 
     export HADOOP_CLASSPATH="/sql/sqljdbc41.jar"
     
@@ -46,6 +46,6 @@ If you need an error on sqoop export, you might have to add sql JDBC jar in the 
 
     sqoop export --connection-manager org.apache.sqoop.manager.SQLServerManager --connect 'jdbc:sqlserver://HOST:PORT;database=DATABASE_NAME' --username 'USER_NAME' -P --export-dir '/user/root/movies_new/movies_new.csv' --table 'movies_txt' --input-fields-terminated-by '|' --lines-terminated-by '\n'
 
-If you need an error on sqoop export, you might have to add sql JDBC jar in the class path;
+If you get an error on sqoop export, you might have to add sql JDBC jar in the Hadoop class path;
 
     export HADOOP_CLASSPATH="/sql/sqljdbc41.jar"    
