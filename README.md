@@ -2,7 +2,7 @@
 Export from Hive to MSSQL
 
 Note: 
-1) Using dataset from grouplen.org https://grouplens.org/datasets/movielens/. A copy of CSV file has been provided in the project.
+1) Using movies dataset from grouplens.org https://grouplens.org/datasets/movielens/. A copy of CSV file has been provided in the project.
 2) This process has been tested on Linux OS using Hortonwork Sandbox distribution for VMWare 
 3) Sqoop job was tested on AWS RDS (MSSQL Express / Free tier) and Azure (SQL Server)
 
